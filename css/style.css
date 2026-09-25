@@ -1,0 +1,1098 @@
+/* ==========================================
+   1. VARIABLES DE ESTILO Y PALETA DE MARCA
+   ========================================== */
+:root {
+  /* Tipografías */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Montserrat', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Montserrat', sans-serif;
+
+  /* Paleta Ámonic */
+  --terracota: #a0523d;
+  --terracota-dark: #833e2c;
+  --terracota-light: #d07a63;
+  --verde-oliva: #586148;
+  --verde-liquen: #a2b29f;
+  --verde-oscuro: #3d5a45;
+  --verde-oliva-med: #515848;
+
+  /* Colores Secundarios / Alias */
+  --color-terracotta: #c45b3a;
+  --color-dark: #222222;
+  --color-gray-light: #f8f9fa;
+
+  /* Fondos y Neutros */
+  --bg-main: #f7f5f0;
+  --bg-card: #ffffff;
+  --bg-marroquineria: #f3efe8;
+  --bg-crema: #eeebe3;
+  --bg-arena: #f3efe6;
+  --bg-suave: #f8f6f2;
+
+  /* Textos */
+  --text-dark: #222222;
+  --text-muted: #76736d;
+}
+
+/* ==========================================
+   2. REGLAS BASE Y RESET
+   ========================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+}
+
+hr {
+  color: var(--text-dark);
+}
+
+/* ==========================================
+   3. UTILIDADES DE TIPOGRAFÍA Y COLOR
+   ========================================== */
+.font-serif { font-family: var(--font-serif); }
+.font-sans { font-family: var(--font-sans); }
+
+.brand-heading {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: 1px;
+}
+
+.style-label {
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+}
+
+.extra-small {
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.body-text {
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* Utilidades de Texto */
+.text-olive { color: #737d61 !important; }
+.text-dark-custom, 
+.text-dark-title { color: var(--text-dark); }
+
+/* Utilidades de Iconos */
+.icon-terracotta { color: var(--terracota); }
+.icon-terracotta-light { color: var(--terracota-light); }
+.icon-green { color: var(--verde-oscuro); }
+.icon-dark { color: #333333; }
+
+/* Utilidades de Fondo */
+.bg-cream { background-color: var(--bg-crema); }
+.bg-sand { background-color: var(--bg-arena); }
+.bg-light-soft, 
+.bg-light-section { background-color: var(--bg-suave); }
+.bg-olive-dark { background-color: #3d4338; }
+.bg-olive-medium { background-color: var(--verde-oliva-med); }
+
+/* ==========================================
+   4. NAVEGACIÓN Y NAVBAR
+   ========================================== */
+.navbar {
+  background-color: #ffffff;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Títulos de Marca en Nav */
+.brand-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: 0.5px;
+}
+
+.brand-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  color: var(--terracota);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.brand-title2 {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.brand-subtitle2 {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Enlaces de Navegación */
+.custom-link {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-dark) !important;
+  transition: all 0.25s ease;
+}
+
+.custom-link:hover,
+.custom-link.active {
+  color: var(--terracota) !important;
+}
+
+.navbar .custom-link.active {
+  font-weight: 600;
+}
+
+/* Categorías */
+.nav-categories {
+  width: 100%;
+}
+
+.nav-categories .nav-link {
+  color: #333333;
+  font-size: 0.82rem;
+  padding: 7px 10px;
+  border-radius: 7px;
+  background-color: transparent;
+  text-decoration: none;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.nav-categories .nav-link:hover {
+  background-color: var(--text-dark);
+  color: var(--bg-main) !important;
+  transform: translateX(3px);
+}
+
+.nav-categories .nav-link.active {
+  background-color: #e6e1d7;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.nav-categories .nav-link.active:hover {
+  background-color: var(--text-dark);
+  color: var(--bg-main) !important;
+}
+
+.category-img-icon {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: var(--verde-oliva);
+  padding: 6px;
+}
+
+/* Carrito en Nav */
+.carrito-icon {
+  color: var(--terracota);
+}
+
+.carrito-badge, 
+.badge-cart {
+  background-color: var(--terracota);
+  font-size: 0.65rem;
+  padding: 0.35em 0.55em;
+}
+
+.cart-heading {
+  color: var(--terracota);
+}
+
+/* ==========================================
+   5. TARJETAS DE PRODUCTO Y CATÁLOGO
+   ========================================== */
+.product-card {
+  background-color: #faf9f5;
+  border: 1px solid rgba(34, 34, 34, 0.12);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(34, 34, 34, 0.08);
+}
+
+.product-image {
+  width: 100%;
+  height: 245px;
+  object-fit: cover;
+}
+
+.price-tag {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.btn-fav {
+  background-color: rgba(255, 255, 255, 0.88);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  padding: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.badge-star {
+  background-color: #737d61;
+  color: #ffffff;
+  font-size: 0.62rem;
+  letter-spacing: 0.5px;
+  padding: 5px 9px;
+}
+
+.bg-badge-muted {
+  background-color: #e3e0d4;
+  color: #555555;
+  font-size: 0.65rem;
+}
+
+.bg-sustainable-box {
+  background-color: #e8e6d8;
+  border: 1px solid var(--terracota);
+}
+
+/* Selectores de Color en Listados */
+.color-list {
+  margin-top: 9px;
+}
+
+.color-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.color-name {
+  font-size: 0.67rem;
+  color: #555555;
+  line-height: 1.3;
+}
+
+.color-dot {
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid rgba(34, 34, 34, 0.20);
+}
+
+/* Marroquinería y Accesorios */
+.bg-card-marroqueri {
+  background-color: var(--bg-marroquineria);
+  border-color: #e5e0d5 !important;
+}
+
+.accessory-card {
+  min-height: 120px;
+}
+
+.accessory-image {
+  object-fit: cover;
+}
+
+/* ==========================================
+   6. PÁGINA DE DETALLE DE PRODUCTO
+   ========================================== */
+.product-title {
+  font-size: 1.85rem;
+  color: #333;
+  letter-spacing: 0.5px;
+}
+
+.sku-text {
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.product-price {
+  color: #2b2b2b;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.product-description p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Galería e Imágenes del Producto */
+.main-image-container img {
+  object-fit: cover;
+  max-height: 580px;
+  background-color: var(--color-gray-light);
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnail-gallery {
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.thumbnail-gallery::-webkit-scrollbar {
+  height: 4px;
+}
+
+.thumbnail-gallery::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.thumbnail-gallery .img-thumbnail {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  padding: 0;
+  border-radius: 0;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.thumbnail-gallery .img-thumbnail.active,
+.thumbnail-gallery .img-thumbnail:hover {
+  border-color: #000;
+}
+
+.static-thumb {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+.static-thumb:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-terracotta);
+}
+
+/* Selector Circular de Color */
+.color-circle {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 1px #ddd;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
+}
+
+.color-circle:hover {
+  transform: scale(1.1);
+}
+
+.btn-check:checked + .color-circle {
+  border: 2px solid #000;
+  box-shadow: 0 0 0 2px #222222;
+  transform: scale(1.1);
+}
+
+/* Selector de Talla */
+.custom-select-size {
+  max-width: 200px;
+  border-radius: 0;
+  border-color: #333;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.9rem;
+}
+
+.custom-select-size:focus {
+  box-shadow: none;
+  border-color: #000;
+}
+
+/* Selector de Cantidad */
+.quantity-picker {
+  width: 120px;
+}
+
+.quantity-picker .btn {
+  width: 40px;
+  border-radius: 0;
+  border-color: #333;
+  color: #333;
+  font-weight: 600;
+}
+
+.quantity-picker .btn:hover {
+  background-color: transparent;
+  color: #000;
+}
+
+.quantity-picker input {
+  width: 40px;
+  border-left: none;
+  border-right: none;
+  border-color: #333 !important;
+  border-radius: 0;
+}
+
+/* Botón Agregar al Carrito */
+.btn-add-cart {
+  border-radius: 0;
+  background-color: #2e3032;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn-add-cart:hover {
+  background-color: var(--color-terracotta);
+}
+
+.btn-add-cart:active {
+  transform: scale(0.99);
+}
+
+/* Acordeón del Producto */
+.product-info-accordion .accordion-item {
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  border-color: #d1d1d1;
+}
+
+.product-info-accordion .accordion-button {
+  padding: 1.2rem 0;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: #333;
+  background-color: transparent;
+  box-shadow: none !important;
+}
+
+.product-info-accordion .accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: var(--color-terracotta);
+}
+
+.product-info-accordion .accordion-body {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* ==========================================
+   7. SECCIONES GENERALES Y HERO
+   ========================================== */
+.block-container-max {
+  max-width: 500px;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 450px;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.hero-title {
+  letter-spacing: 1px;
+}
+
+.hero-subtitle {
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+}
+
+.hero-subtitle-max {
+  max-width: 500px;
+}
+
+.hero-line {
+  border-bottom: 1px solid #ffffff;
+  width: 40px;
+  display: inline-block;
+}
+
+/* Títulos y Líneas de Sección */
+.section-number {
+  color: #888888;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.section-line {
+  border-bottom: 1px solid #cccccc;
+  width: 30px;
+}
+
+.section-line-dark {
+  border-bottom: 1px solid #666666;
+  width: 30px;
+}
+
+.section-title {
+  letter-spacing: 1px;
+}
+
+.section-subtag {
+  letter-spacing: 1px;
+  color: #000000;
+  font-size: 0.9rem;
+}
+
+/* Sección Nosotros */
+.bg-nosotros {
+  background-color: #f7f6f2;
+}
+
+.origin-img {
+  max-height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.badge-location {
+  width: 130px;
+  height: 130px;
+  border: 1px dashed var(--terracota);
+}
+
+.badge-loc-title {
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  color: var(--terracota);
+}
+
+.badge-loc-sub {
+  font-size: 0.55rem;
+  letter-spacing: 1px;
+}
+
+.map-img {
+  max-height: 320px;
+}
+
+.pillar-text {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+
+.design-quote {
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+
+.section-bg-img-container {
+  min-height: 400px;
+}
+
+.section-bg-img-container-tall {
+  min-height: 450px;
+}
+
+.purpose-text {
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  color: #333333;
+}
+
+.identity-box {
+  background-color: var(--verde-oscuro);
+  border-left: 12px solid var(--terracota-light);
+}
+
+.identity-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.gallery-img-main {
+  max-height: 300px;
+}
+
+.gallery-flower-icon {
+  max-height: 120px;
+}
+
+/* Filosofía */
+.philosophy-title {
+  letter-spacing: 0.5px;
+  font-size: 1.1rem;
+  color: #111111;
+}
+
+.philosophy-desc {
+  font-size: 0.95rem;
+}
+
+.values-title {
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.values-grid {
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+}
+
+/* Botones y CTA */
+.cta-container {
+  max-width: 700px;
+}
+
+.cta-subtitle {
+  letter-spacing: 1px;
+}
+
+.cta-tagline {
+  color: var(--terracota);
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+}
+
+.btn-amonic {
+  background-color: #b56046;
+  color: #ffffff;
+  border: none;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-amonic:hover {
+  background-color: var(--terracota-dark);
+}
+
+.btn-hero-cta {
+  background-color: var(--terracota);
+  color: #ffffff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-hero-cta:hover {
+  background-color: var(--terracota-dark);
+}
+
+.btn-outline-amonic {
+  color: var(--terracota);
+  border-color: var(--terracota) !important;
+  background: transparent;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-amonic:hover {
+  background-color: var(--terracota);
+  color: #ffffff;
+}
+
+/* ==========================================
+   8. CONTACTO Y FORMULARIO
+   ========================================== */
+.bg-form-column {
+  background-color: #f9f7f2;
+}
+
+.bg-info-column {
+  background-color: #e6dfd3;
+}
+
+.form-wrapper {
+  max-width: 500px;
+  width: 100%;
+}
+
+.info-wrapper {
+  max-width: 420px;
+  width: 100%;
+}
+
+.contact-tag {
+  color: var(--terracota);
+  letter-spacing: 3px;
+  font-size: 0.85rem;
+}
+
+.contact-title {
+  color: #1a1a1a;
+}
+
+.contact-desc {
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.subtitle-question {
+  color: var(--terracota);
+  letter-spacing: 1px;
+}
+
+.border-gray-custom {
+  border-color: #cccccc !important;
+}
+
+.border-gray-medium {
+  border-color: #888888 !important;
+}
+
+/* Campos de Formulario */
+.form-custom-label {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #333333;
+}
+
+.form-custom-input,
+.form-custom-select {
+  font-size: 0.9rem;
+  color: #555555;
+}
+
+.btn-send {
+  background-color: #4a523f;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-send:hover {
+  background-color: #394030;
+}
+
+/* Columna Lateral de Información */
+.info-brand-title {
+  color: #1a1a1a;
+}
+
+.info-brand-subtitle {
+  color: var(--terracota);
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+}
+
+.info-divider {
+  border-top: 1.5px solid #666666;
+  width: 60px;
+  opacity: 1;
+}
+
+.contact-info-list {
+  font-size: 0.95rem;
+  color: #2a2a2a;
+}
+
+.info-divider-container {
+  max-width: 320px;
+}
+
+.cta-info-title {
+  color: #1a1a1a;
+  font-size: 1.05rem;
+}
+
+/* ==========================================
+   9. FOOTER Y REDES SOCIALES
+   ========================================== */
+.footer-text {
+  font-family: var(--font-sans);
+}
+
+.social-share a,
+.social-icon {
+  font-size: 1.1rem;
+  color: #6c757d;
+  transition: color 0.2s ease;
+}
+
+.social-share a:hover,
+.social-icon:hover {
+  color: var(--color-terracotta) !important;
+}
+
+/* ==========================================
+   10. ADAPTABILIDAD Y MEDIA QUERIES
+   ========================================== */
+@media (max-width: 991px) {
+  .product-image {
+    height: 220px;
+  }
+}
+
+@media (max-width: 767px) {
+  .product-image {
+    height: 280px;
+  }
+  
+  .nav-categories {
+    margin-bottom: 30px;
+  }
+  
+  .brand-heading {
+    letter-spacing: 0.5px;
+  }
+  
+  .badge-star {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .product-image {
+    height: 300px;
+  }
+  
+  .accessory-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 15px;
+  }
+  
+  .accessory-image {
+    width: 100%;
+    height: 150px;
+  }
+}
+/* Variables de Color y Tipografía */
+:root {
+  --bg-dark-green: #1c2a20;
+  --bg-card-cream: #eee8df;
+  --color-rust: #b25829;
+  --text-main: #333333;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-main);
+  background-color: #f7f5f0 !important;
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.extra-small {
+  font-size: 0.78rem;
+}
+
+.badge-subheading {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c2ab87;
+  font-weight: 600;
+}
+
+/* Colores personalizados */
+.bg-dark-green {
+  background-color: var(--bg-dark-green) !important;
+}
+
+.text-rust {
+  color: var(--color-rust) !important;
+}
+
+.btn-rust {
+  background-color: var(--color-rust);
+  color: #ffffff;
+  border: none;
+}
+
+.btn-rust:hover {
+  background-color: #96471e;
+  color: #ffffff;
+}
+
+.hero-section {
+  background-color: var(--bg-dark-green);
+}
+
+/* Tarjetas */
+.card-custom {
+  background-color: var(--bg-card-cream);
+  border-radius: 12px;
+}
+
+.section-title {
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.decorative-divider {
+  font-size: 0.8rem;
+  color: #a39582;
+}
+
+/* Pasos de Proceso */
+.step-badge {
+  width: 26px;
+  height: 26px;
+  background-color: var(--color-rust);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-icon-box {
+  width: 60px;
+  height: 60px;
+  background-color: var(--bg-card-cream);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #444;
+}
+
+/* Sello circular del footer */
+.stamp-badge {
+  width: 100px;
+  height: 100px;
+  border: 1px dashed #ffffff77;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.6rem;
+  padding: 10px;
+  letter-spacing: 1px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+body {
+    background-color: #faf8f5;
+    font-family: 'Montserrat', sans-serif;
+    color: #2c2a29;
+}
+
+.font-playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+.border-bottom, .border-top {
+    border-color: #e6e2d8 !important;
+}
+
+/* Ajustes para inputs y botones de cantidad */
+.input-group .btn-outline-secondary {
+    border-color: #dcd6cb;
+    color: #2c2a29;
+    background-color: #ffffff;
+}
+
+.input-group .form-control {
+    border-color: #dcd6cb;
+    background-color: #ffffff;
+    color: #2c2a29;
+}
+/* Estilos generales para fuentes y componentes del producto */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, .brand-title {
+    font-family: 'Playfair Display', serif;
+}
+
+.brand-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #6c757d;
+}
+
+/* Selector de colores interactivo */
+.color-btn {
+    border-radius: 4px;
+    padding: 0.35rem 0.8rem;
+    font-size: 0.85rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.color-btn.active {
+    background-color: #212529 !important;
+    color: #fff !important;
+    border-color: #212529 !important;
+}
+
+/* Contenedor de imagen principal */
+.main-image-container {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
+}
+
+.main-image-container img {
+    max-height: 450px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.main-image-container img:hover {
+    transform: scale(1.03);
+}
+
+/* Enlaces personalizados */
+.custom-link {
+    color: #212529;
+    font-weight: 500;
+}
+
+.custom-link:hover, .custom-link.active {
+    color: #000;
+}
+
+/* Tarjetas de productos relacionados */
+.product-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1) !important;
+}

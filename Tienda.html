@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amonic - Elegancia con raíces</title>
+    <!-- Favicon de la página -->
+    <link rel="icon" type="image/png" href="Img/LOGO en barra.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap Iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="scroll-smooth">
+
+    <!-- Barra de Navegación -->
+    <header class="sticky-top bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light py-3">
+            <div class="container">
+                <!-- Logo en la Barra de Nav -->
+                <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+                    <img src="Img/LOGO en barra.png" alt="Amonic Logo" width="45" height="45" class="d-inline-block object-fit-contain">
+                    <div class="d-flex flex-column align-items-start">
+                        <span class="brand-title lh-1">Ámonic</span>
+                        <span class="brand-subtitle">Elegancia con raíces</span>
+                    </div>
+                </a>
+
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAmonic" aria-controls="navbarAmonic" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú de navegación y Carrito -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarAmonic">
+                    <ul class="navbar-nav gap-lg-4 text-center align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link custom-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-link" href="Nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-link active" href="Tienda.html">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-link" href="Contacto.html">Contacto</a>
+                        </li>
+                        <!-- Carrito de compras -->
+                        <li class="nav-item mt-2 mt-lg-0">
+                            <!-- Nota: Se recomienda renombrar el archivo físico a 'carrito-de-compras.html' para evitar espacios -->
+                            <a class="nav-link custom-link position-relative px-2" href="Carrito de Compras.html" aria-label="Carrito de compras">
+                                <i class="bi bi-bag fs-5 carrito-icon"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main class="py-4">
+    <div class="container-fluid px-lg-5">
+        <div class="row g-4">
+
+            <!-- COLUMNA IZQUIERDA (ASIDE) -->
+            <aside class="col-lg-3 col-md-4">
+                <h2 class="brand-heading h2 mb-2">PRODUCTOS</h2>
+
+                <p class="text-muted extra-small mb-4">
+                    Diseños contemporáneos inspirados en Moniquirá, Boyacá y su biodiversidad.
+                </p>
+
+                <!-- CATEGORÍAS -->
+                <span class="text-uppercase text-muted fw-bold d-block mb-2 style-label">Categorías</span>
+                <hr class="mt-0 mb-3 opacity-25">
+
+                <div class="nav flex-column nav-categories gap-1 mb-4">
+                    <!-- CONFECCIÓN TEXTIL -->
+                    <div class="d-flex align-items-center gap-2 mt-2 mb-1">
+                        <img src="Img/Icono camisa  balnco y negro.png" alt="Confección Textil" class="category-img-icon">
+                        <span class="fw-bold small text-dark">Confección Textil</span>
+                    </div>
+                    <a class="nav-link ms-4" href="#camisas">Camisas</a>
+                    <a class="nav-link ms-4" href="#camisetas">Camisetas Juveniles</a>
+
+                    <!-- ACCESORIOS -->
+                    <div class="d-flex align-items-center gap-2 mt-3 mb-1">
+                        <img src="Img/Icono cinturon Blanco y Negro.png" alt="Accesorios" class="category-img-icon">
+                        <span class="fw-bold small text-dark">Accesorios</span>
+                    </div>
+                    <a class="nav-link ms-4" href="#sombreros">Sombreros</a>
+
+                    <!-- PRÓXIMAMENTE -->
+                    <div class="d-flex align-items-center gap-2 mt-3 mb-1">
+                        <img src="Img/Icono bolso Blanco Negro.png" alt="Próximamente" class="category-img-icon">
+                        <span class="fw-bold small text-dark">Próximamente</span>
+                    </div>
+                    <div class="d-flex align-items-center ms-4">
+                        <a class="nav-link p-0 me-2" href="#marroquineria">Marroquinería</a>
+                        <span class="badge bg-badge-muted text-muted">Próximamente</span>
+                    </div>
+                </div>
+
+                <!-- MODA SOSTENIBLE -->
+                <div class="p-3 rounded-3 bg-sustainable-box mt-5">
+                    <div class="d-flex align-items-center gap-2 mb-2 text-olive fw-bold small">
+                        <img src="Img/Banner 1.png" alt="Moda Sostenible Icono" width="18" height="18">
+                        MODA SOSTENIBLE
+                    </div>
+                    <p class="mb-0 text-muted extra-small">
+                        Confeccionamos con materiales naturales y apoyamos a artesanos y proveedores locales.
+                    </p>
+                </div>
+            </aside>
+
+            <!-- COLUMNA DERECHA (SECCIÓN DE PRODUCTOS) -->
+            <section class="col-lg-9 col-md-8">
+
+                <h1 class="visually-hidden">Catálogo de Productos Ámonic</h1>
+
+                <!-- CAMISA MASCULINA ÁMONIC -->
+                <div class="mb-5" id="camisas">
+                    <span class="text-uppercase text-muted fw-bold style-label d-block mb-1">Confección Textil</span>
+
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                        <h3 class="brand-heading h3 mb-0">Camisa Masculina Ámonic Esencia Natural</h3>
+                        <span class="badge badge-star rounded-pill ms-2">PRODUCTO ESTRELLA</span>
+                    </div>
+
+                    <p class="text-muted small mb-4">
+                        Frescura, comodidad y elegancia natural. Inspirada en los colores y paisajes de Boyacá.
+                    </p>
+
+                    <div class="row g-3">
+                        <!-- PRODUCTO 1: CAMISA ESENCIA NATURAL -->
+                        <div class="col-md-6">
+                            <div class="card product-card h-100">
+                                <div class="position-relative">
+                                    <a href="Camisa.html">
+                                        <img src="Img/Camisa Maculina Ámonic Esencia Natural-Arena Clara.png" class="card-img-top product-image" alt="Camisa Masculina Ámonic Esencia Natural">
+                                    </a>
+                                    <button class="btn btn-fav position-absolute top-0 end-0 m-2" aria-label="Agregar al carrito" onclick="agregarAlCarrito()">
+                                        <img src="Img/Icono camisa color.png" alt="Favorito" width="20" height="20">
+                                    </button>
+                                </div>
+                                <div class="card-body p-3">
+                                    <h6 class="fw-bold mb-1">
+                                        <a href="Camisa.html" class="text-decoration-none text-dark">Camisa Masculina Ámonic</a>
+                                    </h6>
+                                    <span class="text-muted d-block extra-small mb-1">Esencia Natural · Manga larga</span>
+                                    <span class="fw-bold price-tag">$ 110.000</span>
+
+                                    <!-- COLORES -->
+                                    <div class="color-list mt-2">
+                                        <div class="color-item"><span class="color-dot" style="background:#D8C7AA;"></span><span class="color-name">Arena Clara</span></div>
+                                        <div class="color-item"><span class="color-dot" style="background:#526475;"></span><span class="color-name">Azul Pizarra</span></div>
+                                        <div class="color-item"><span class="color-dot" style="background:#777B60;"></span><span class="color-name">Oliva Piedra</span></div>
+                                        <div class="color-item"><span class="color-dot" style="background:#A8553B;"></span><span class="color-name">Terracota Talabartero</span></div>
+                                        <div class="color-item"><span class="color-dot" style="background:#82786D;"></span><span class="color-name">Topo</span></div>
+                                        <div class="color-item"><span class="color-dot" style="background:#A2B29F;"></span><span class="color-name">Verde Líquen Suave</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PRODUCTO 2: CAMISA BOTONES -->
+                        <div class="col-md-6">
+                            <div class="card product-card h-100">
+                                <div class="position-relative">
+                                    <a href="Camisa de botones.html">
+                                        <img src="Img/Camisa de botones de manga larga-Azul oxford.png" class="card-img-top product-image" alt="Camisa de botones de manga larga">
+                                    </a>
+                                    <button class="btn btn-fav position-absolute top-0 end-0 m-2" aria-label="Agregar al carrito" onclick="agregarAlCarrito()">
+                                        <img src="Img/Icono camisa botones color.png" alt="Favorito" width="20" height="20">
+                                    </button>
+                                </div>
+                                <div class="card-body p-3">
+                                    <h6 class="fw-bold mb-1">
+                                        <a href="Camisa de botones.html" class="text-decoration-none text-dark">Camisa de botones de manga larga</a>
+                                    </h6>
+                                    <span class="text-muted d-block extra-small mb-1">Diseño clásico Ámonic</span>
+                                    <span class="fw-bold price-tag">$ 100.000</span>
+
+                                    <!-- COLORES -->
+                                    <div class="color-list mt-2">
+                                        <div class="color-item"><span class="color-dot" style="background:#526B82;"></span><span class="color-name">Azul Oxford</span></div>
+                                        <div class="color-item"><span class="color-dot" style="background:#F5F5F0;"></span><span class="color-name">Blanco Hueso</span></div>
+                                        <div class="color-item"><span class="color-dot" style="background:#777B60;"></span><span class="color-name">Oliva Piedra</span></div>
+                                        <div class="color-item"><span class="color-dot" style="background:#A8553B;"></span><span class="color-name">Terracota Talabartero</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CAMISETAS JUVENILES -->
+                <div class="mb-5" id="camisetas">
+                    <h3 class="brand-heading h3 mb-1">Camisetas Juveniles</h3>
+                    <p class="text-muted small mb-4">
+                        Diseños contemporáneos para el día a día. Versátiles, cómodas y con identidad.
+                    </p>
+                    <div class="row g-3">
+                        <!-- CAMISETA 1 -->
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="position-relative">
+                                    <a href="Camiseta Juvenil 1.html">
+                                        <img src="Img/Camiseta 1.png" class="card-img-top product-image" alt="Camiseta Juvenil Ámonic ">
+                                    </a>
+                                    <button class="btn btn-fav position-absolute top-0 end-0 m-2" aria-label="Agregar al carrito" onclick="agregarAlCarrito()">
+                                        <img src="Img/Icono camiseta.png" alt="Favorito" width="20" height="20">
+                                    </button>
+                                </div>
+                                <div class="card-body p-3">
+                                    <h6 class="fw-bold mb-1">
+                                        <a href="Camiseta Juvenil 1.html" class="text-decoration-none text-dark">Camiseta Juvenil Ámonic</a>
+                                    </h6>
+                                    <span class="text-muted d-block extra-small mb-1">Flor Lineal</span>
+                                    <span class="fw-bold price-tag">$ 30.000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CAMISETA 2 -->
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="position-relative">
+                                    <a href="Camiseta Juvenil 2.html">
+                                        <img src="Img/Camiseta 2.png" class="card-img-top product-image" alt="Camiseta Juvenil Ámonic Flor Lineal">
+                                    </a>
+                                    <button class="btn btn-fav position-absolute top-0 end-0 m-2" aria-label="Agregar al carrito" onclick="agregarAlCarrito()">
+                                        <img src="Img/Icono camiseta.png" alt="Favorito" width="20" height="20">
+                                    </button>
+                                </div>
+                                <div class="card-body p-3">
+                                    <h6 class="fw-bold mb-1">
+                                        <a href="Camiseta Juvenil 2.html" class="text-decoration-none text-dark">Camiseta Juvenil Ámonic</a>
+                                    </h6>
+                                    <span class="text-muted d-block extra-small mb-1">Flor Lineal</span>
+                                    <span class="fw-bold price-tag">$ 30.000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CAMISETA 3 -->
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="position-relative">
+                                    <a href="Camiseta Juvenil 3.html">
+                                        <img src="Img/Camiseta 3.png" class="card-img-top product-image" alt="Camiseta Juvenil Ámonic Flor Lineal">
+                                    </a>
+                                    <button class="btn btn-fav position-absolute top-0 end-0 m-2" aria-label="Agregar al carrito" onclick="agregarAlCarrito()">
+                                        <img src="Img/Icono camiseta.png" alt="Favorito" width="20" height="20">
+                                    </button>
+                                </div>
+                                <div class="card-body p-3">
+                                    <h6 class="fw-bold mb-1">
+                                        <a href="Camiseta Juvenil 3.html" class="text-decoration-none text-dark">Camiseta Juvenil Ámonic</a>
+                                    </h6>
+                                    <span class="text-muted d-block extra-small mb-1">Flor Lineal</span>
+                                    <span class="fw-bold price-tag">$ 30.000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CAMISETA 4 -->
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="position-relative">
+                                    <a href="Camiseta Juvenil 4.html">
+                                        <img src="Img/Camiseta 4.png" class="card-img-top product-image" alt="Camiseta Juvenil Ámonic Flor Lineal">
+                                    </a>
+                                    <button class="btn btn-fav position-absolute top-0 end-0 m-2" aria-label="Agregar al carrito" onclick="agregarAlCarrito()">
+                                        <img src="Img/Icono camiseta.png" alt="Favorito" width="20" height="20">
+                                    </button>
+                                </div>
+                                <div class="card-body p-3">
+                                    <h6 class="fw-bold mb-1">
+                                        <a href="Camiseta Juvenil 4.html" class="text-decoration-none text-dark">Camiseta Juvenil Ámonic</a>
+                                    </h6>
+                                    <span class="text-muted d-block extra-small mb-1">Flor Lineal</span>
+                                    <span class="fw-bold price-tag">$ 30.000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CAMISETA 5 -->
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="position-relative">
+                                    <a href="Camiseta Juvenil 5.html">
+                                        <img src="Img/Camiseta 5.png" class="card-img-top product-image" alt="Camiseta Juvenil Ámonic Flor Lineal">
+                                    </a>
+                                    <button class="btn btn-fav position-absolute top-0 end-0 m-2" aria-label="Agregar al carrito" onclick="agregarAlCarrito()">
+                                        <img src="Img/Icono camiseta.png" alt="Favorito" width="20" height="20">
+                                    </button>
+                                </div>
+                                <div class="card-body p-3">
+                                    <h6 class="fw-bold mb-1">
+                                        <a href="Camiseta Juvenil 5.html" class="text-decoration-none text-dark">Camiseta Juvenil Ámonic</a>
+                                    </h6>
+                                    <span class="text-muted d-block extra-small mb-1">Flor Lineal</span>
+                                    <span class="fw-bold price-tag">$ 30.000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ACCESORIOS -->
+                <div class="mb-5" id="sombreros">
+                    <span class="text-uppercase text-muted fw-bold style-label d-block mb-3">ACCESORIOS</span>
+
+                    <div class="row g-3">
+                        <!-- SOMBREROS (Enlazado a Sombreros.html) -->
+                        <div class="col-md-6">
+                            <a href="Sombreros.html" class="text-decoration-none text-dark">
+                                <div class="card product-card accessory-card p-3 d-flex flex-row align-items-center justify-content-between h-100 shadow-sm transition-card">
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Sombreros</h6>
+                                        <p class="extra-small text-muted mb-0">Tradición y estilo<br>que te acompañan.</p>
+                                    </div>
+                                    <img src="Img/Sombrero Ganadero 2.png" class="rounded-3 accessory-image" alt="Sombreros" width="120" height="90">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MARROQUINERÍA -->
+                <div class="p-4 rounded-3 border bg-card-marroqueri d-flex justify-content-between align-items-center mb-4" id="marroquineria">
+                    <div>
+                        <span class="text-uppercase fw-bold style-label d-block text-muted mb-1">MARROQUINERÍA</span>
+                        <h5 class="fw-bold mb-1">Línea en desarrollo</h5>
+                        <p class="extra-small text-muted mb-0">
+                            Estamos trabajando en una colección de productos en cuero inspirada en nuestras raíces.
+                        </p>
+                    </div>
+                    <a href="Línea en desarrollo.html" class="badge bg-white text-dark border px-3 py-2 text-uppercase fw-semibold text-decoration-none" style="letter-spacing:1px; font-size:0.75rem;">
+                        PRÓXIMAMENTE
+                    </a>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="text-center py-4 bg-dark text-white">
+    <p class="mb-0 fs-6 fw-bold font-sans">
+        © 2026 Ámonic Elegancia con raíces.
+    </p>
+</footer>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

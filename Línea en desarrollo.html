@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amonic - Elegancia con raíces</title>
+    <!-- Favicon de la página -->
+    <link rel="icon" type="image/png" href="Img/LOGO en barra.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap Iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="scroll-smooth">
+
+    <!-- Barra de Navegación -->
+    <header class="sticky-top bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light py-3">
+            <div class="container">
+                <!-- Logo en la Barra de Nav -->
+                <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+                    <img src="Img/LOGO en barra.png" alt="Amonic Logo" width="45" height="45" class="d-inline-block object-fit-contain">
+                    <div class="d-flex flex-column align-items-start">
+                        <span class="brand-title lh-1">Ámonic</span>
+                        <span class="brand-subtitle">Elegancia con raíces</span>
+                    </div>
+                </a>
+
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAmonic" aria-controls="navbarAmonic" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú de navegación y Carrito -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarAmonic">
+                    <ul class="navbar-nav gap-lg-4 text-center align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link custom-link active" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-link" href="Nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-link" href="Tienda.html">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-link" href="Contacto.html">Contacto</a>
+                        </li>
+                        <!-- Carrito de compras -->
+                        <!-- Carrito de compras -->
+                        <li class="nav-item mt-2 mt-lg-0">
+                            <!-- Nota: Se recomienda renombrar el archivo físico a 'carrito-de-compras.html' para evitar espacios -->
+                            <a class="nav-link custom-link position-relative px-2" href="Carrito de Compras.html" aria-label="Carrito de compras">
+                                <i class="bi bi-bag fs-5 carrito-icon"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 1. Banner Principal -->
+    <section class="bg-dark-green text-white py-5">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+                <span class="badge-subheading">PRÓXIMAMENTE</span>
+                <h1 class="display-3 font-serif fw-bold my-3">
+                    <a href="https://co.daniellemonnet.com/2025/08/25/marroquineria-lujo-artesanal-colombiano/" class="text-white text-decoration-none">MARROQUINERÍA</a>
+                </h1>
+                <p class="lead fs-6 text-light-50 mb-4">
+                    Diseños que unirán tradición, funcionalidad y materiales nobles. Muy pronto, una nueva forma de llevar contigo lo que somos.
+                </p>
+                <div class="d-inline-flex align-items-center gap-2 border border-gold text-gold px-3 py-2 rounded-pill small">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>LANZAMIENTO 2027</span>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="Img/Marroquinería Banner.png" alt="Marroquinería Ámonic" class="img-fluid rounded-4 shadow">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 2. LO QUE VIENE -->
+    <section class="py-5 text-center">
+        <div class="container">
+            <h2 class="section-title font-serif">LO QUE VIENE</h2>
+            <div class="decorative-divider mx-auto mb-5"><span>🌺</span></div>
+
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+                <!-- Bolsos -->
+                <div class="col">
+                    <div class="card h-100 border-0 card-cream p-3 text-center">
+                        <img src="Img/Marroquinería Bolso.png" class="card-img-top rounded p-2" alt="Bolsos">
+                        <div class="card-body px-0">
+                            <h5 class="card-title font-serif fw-bold fs-6">BOLSOS</h5>
+                            <p class="card-text text-muted extra-small">Diseños atemporales inspirados en lo natural.</p>
+                            <hr class="w-25 mx-auto border-secondary">
+                        </div>
+                    </div>
+                </div>
+                <!-- Billeteras -->
+                <div class="col">
+                    <div class="card h-100 border-0 card-cream p-3 text-center">
+                        <img src="Img/Marroquinería  Billetera.png" class="card-img-top rounded p-2" alt="Billeteras">
+                        <div class="card-body px-0">
+                            <h5 class="card-title font-serif fw-bold fs-6">BILLETERAS</h5>
+                            <p class="card-text text-muted extra-small">Funcionales, minimalistas y hechas para durar.</p>
+                            <hr class="w-25 mx-auto border-secondary">
+                        </div>
+                    </div>
+                </div>
+                <!-- Cinturones -->
+                <div class="col">
+                    <div class="card h-100 border-0 card-cream p-3 text-center">
+                        <img src="Img/Marroquinería  Cinturon.png" class="card-img-top rounded p-2" alt="Cinturones">
+                        <div class="card-body px-0">
+                            <h5 class="card-title font-serif fw-bold fs-6">CINTURONES</h5>
+                            <p class="card-text text-muted extra-small">Detalles que completan tu esencia.</p>
+                            <hr class="w-25 mx-auto border-secondary">
+                        </div>
+                    </div>
+                </div>
+                <!-- Accesorios -->
+                <div class="col">
+                    <div class="card h-100 border-0 card-cream p-3 text-center">
+                        <img src="Img/Marroquinería Accesorio.png" class="card-img-top rounded p-2" alt="Accesorios">
+                        <div class="card-body px-0">
+                            <h5 class="card-title font-serif fw-bold fs-6">ACCESORIOS</h5>
+                            <p class="card-text text-muted extra-small">Pequeños esenciales, gran identidad.</p>
+                            <hr class="w-25 mx-auto border-secondary">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. COLECCIÓN DESTACADA -->
+    <section class="py-5">
+        <div class="container">
+            <div class="card border-0 card-cream p-4">
+                <div class="row align-items-center gy-4">
+                    <div class="col-lg-4">
+                        <img src="Img/Marroquinería.jfif" class="img-fluid rounded shadow-sm w-100" alt="Textura cuero">
+                    </div>
+                    <div class="col-lg-5">
+                        <span class="badge-subheading">NOMBRE DE LA COLECCIÓN</span>
+                        <h2 class="font-serif fw-bold my-2 display-6">RAÍCES QUE PERDURAN</h2>
+                        <hr class="w-25 border-dark border-2 my-3">
+                        <p class="text-muted small">
+                            Una colección que honra nuestras raíces, nuestra tierra y lo que nos define. Piezas creadas para acompañarte en cada momento, con la esencia de Moniquirá y la calidad que nos representa.
+                        </p>
+                    </div>
+                    <div class="col-lg-3 border-start-lg ps-lg-4">
+                        <div class="d-flex align-items-start gap-3 mb-3">
+                            <i class="bi bi-flower1 fs-3 icon-terracotta"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1 extra-small">INSPIRADA EN LA TIERRA</h6>
+                                <p class="text-muted extra-small mb-0">Colores y texturas que nacen de nuestra región.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start gap-3 mb-3">
+                            <i class="bi bi-hand-index-thumb fs-3 icon-terracotta"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1 extra-small">HECHA CON PROPÓSITO</h6>
+                                <p class="text-muted extra-small mb-0">Cada pieza apoya el trabajo local y consciente.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start gap-3">
+                            <i class="bi bi-heart fs-3 icon-terracotta"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1 extra-small">PARA TODA LA VIDA</h6>
+                                <p class="text-muted extra-small mb-0">Diseños pensados para acompañarte siempre.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. CÓMO SE HACE -->
+    <section class="py-5 text-center">
+        <div class="container">
+            <h2 class="section-title font-serif">CÓMO SE HACE</h2>
+            <div class="decorative-divider mx-auto mb-5"><span>✿</span></div>
+
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4">
+                <div class="col">
+                    <div class="step-badge mx-auto mb-2">1</div>
+                    <div class="step-icon-box mx-auto mb-3"><i class="bi bi-pencil-square"></i></div>
+                    <h6 class="fw-bold extra-small">DISEÑO</h6>
+                    <p class="text-muted extra-small">Ideas que nacen de nuestra cultura y entorno natural.</p>
+                </div>
+                <div class="col">
+                    <div class="step-badge mx-auto mb-2">2</div>
+                    <div class="step-icon-box mx-auto mb-3"><i class="bi bi-patch-check"></i></div>
+                    <h6 class="fw-bold extra-small">SELECCIÓN</h6>
+                    <p class="text-muted extra-small">Elegimos cuidadosamente materiales nobles de alta calidad.</p>
+                </div>
+                <div class="col">
+                    <div class="step-badge mx-auto mb-2">3</div>
+                    <div class="step-icon-box mx-auto mb-3"><i class="bi bi-scissors"></i></div>
+                    <h6 class="fw-bold extra-small">CORTE</h6>
+                    <p class="text-muted extra-small">Cada pieza es cortada con precisión para asegurar perfección.</p>
+                </div>
+                <div class="col">
+                    <div class="step-badge mx-auto mb-2">4</div>
+                    <div class="step-icon-box mx-auto mb-3"><i class="bi bi-handbag"></i></div>
+                    <h6 class="fw-bold extra-small">CONFECCIÓN</h6>
+                    <p class="text-muted extra-small">Artesanos expertos dan vida a cada detalle con dedicación.</p>
+                </div>
+                <div class="col">
+                    <div class="step-badge mx-auto mb-2">5</div>
+                    <div class="step-icon-box mx-auto mb-3"><i class="bi bi-search"></i></div>
+                    <h6 class="fw-bold extra-small">CALIDAD</h6>
+                    <p class="text-muted extra-small">Revisamos cada pieza para que llegue a ti en perfectas condiciones.</p>
+                </div>
+                <div class="col">
+                    <div class="step-badge mx-auto mb-2">6</div>
+                    <div class="step-icon-box mx-auto mb-3"><i class="bi bi-box-seam"></i></div>
+                    <h6 class="fw-bold extra-small">LISTO PARA TI</h6>
+                    <p class="text-muted extra-small">Empaque consciente, listo para acompañarte en tus historias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. MATERIALES Y NEWSLETTER -->
+    <section class="py-4">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Materiales -->
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 card-cream p-4 text-center">
+                        <h5 class="font-serif fw-bold mb-1">MATERIALES QUE USAMOS</h5>
+                        <div class="decorative-divider mx-auto mb-4"><span>✿</span></div>
+                        <div class="row row-cols-2 g-3">
+                            <div class="col">
+                                <i class="bi bi-leaf fs-3 icon-terracotta"></i>
+                                <h6 class="fw-bold mt-2 extra-small">CUERO GENUINO</h6>
+                                <p class="text-muted extra-small">Duradero, suave y de alta calidad.</p>
+                            </div>
+                            <div class="col">
+                                <i class="bi bi-droplet fs-3 icon-terracotta"></i>
+                                <h6 class="fw-bold mt-2 extra-small">ACABADOS NATURALES</h6>
+                                <p class="text-muted extra-small">Tintes y aceites que respetan el medio ambiente.</p>
+                            </div>
+                            <div class="col">
+                                <i class="bi bi-shield-check fs-3 icon-terracotta"></i>
+                                <h6 class="fw-bold mt-2 extra-small">HERRAJES DE CALIDAD</h6>
+                                <p class="text-muted extra-small">Detalles resistentes que aseguran funcionalidad.</p>
+                            </div>
+                            <div class="col">
+                                <i class="bi bi-recycle fs-3 icon-terracotta"></i>
+                                <h6 class="fw-bold mt-2 extra-small">PRODUCCIÓN CONSCIENTE</h6>
+                                <p class="text-muted extra-small">Procesos responsables con el planeta y las personas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 bg-dark-green text-white p-4 justify-content-center">
+                        <span class="badge-subheading">SÉ EL PRIMERO EN SABER</span>
+                        <h3 class="font-serif fw-bold mt-2">NUESTRO LANZAMIENTO ESTÁ MUY CERCA</h3>
+                        <p class="text-light-50 extra-small mb-4">Déjanos tu correo y recibe noticias exclusivas, adelantos y beneficios especiales.</p>
+                        <form class="row g-2">
+                            <div class="col-8">
+                                <input type="email" class="form-control rounded-0 border-0 fs-6 py-2" placeholder="Ingresa tu correo electrónico">
+                            </div>
+                            <div class="col-4">
+                                <button type="submit" class="btn btn-terracotta w-100 rounded-0 fw-bold extra-small py-2">ENVIAR</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. BENEFICIOS -->
+    <section class="py-4 border-top border-bottom my-4">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 text-center text-sm-start">
+                <div class="col d-flex align-items-center gap-3">
+                    <i class="bi bi-truck fs-2 text-dark"></i>
+                    <div>
+                        <h6 class="fw-bold mb-0 extra-small">ENVÍOS A TODO COLOMBIA</h6>
+                        <p class="text-muted extra-small mb-0">Rápidos y seguros.</p>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-center gap-3">
+                    <i class="bi bi-shield-lock fs-2 text-dark"></i>
+                    <div>
+                        <h6 class="fw-bold mb-0 extra-small">PAGOS 100% SEGUROS</h6>
+                        <p class="text-muted extra-small mb-0">Tus datos siempre protegidos.</p>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-center gap-3">
+                    <i class="bi bi-box-arrow-right fs-2 text-dark"></i>
+                    <div>
+                        <h6 class="fw-bold mb-0 extra-small">CAMBIOS Y DEVOLUCIONES FÁCILES</h6>
+                        <p class="text-muted extra-small mb-0">Queremos que estés siempre satisfecho.</p>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-center gap-3">
+                    <i class="bi bi-headset fs-2 text-dark"></i>
+                    <div>
+                        <h6 class="fw-bold mb-0 extra-small">ATENCIÓN PERSONALIZADA</h6>
+                        <p class="text-muted extra-small mb-0">Estamos aquí para ayudarte.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FOOTER -->
+    <footer class="bg-dark-green text-white py-5">
+        <div class="container">
+            <div class="row gy-4 align-items-center justify-content-between">
+                <div class="col-lg-5">
+                    <h4 class="font-serif fw-bold tracking-wide mb-1">ÁMONIC</h4>
+                    <span class="extra-small text-uppercase text-light-50 d-block mb-3">Elegancia con raíces</span>
+                    <p class="extra-small text-light-50 mb-3">Somos una marca que honra nuestras raíces a través de diseños atemporales y materiales que cuentan historias.</p>
+                    <div class="d-flex gap-3 fs-5">
+                        <a href="https://www.instagram.com/amonic.0fficial00/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram de Ámonic">
+                        <i class="bi bi-instagram fs-5"></i>
+                        <a href="#" class="text-white"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <h6 class="fw-bold extra-small text-uppercase mb-3">Contacto</h6>
+                    <p class="extra-small text-light-50 mb-1">Moniquirá, Boyacá, Colombia</p>
+                    <p class="extra-small text-light-50 mb-1">+57 310 123 4567</p>
+                    <p class="extra-small text-light-50 mb-4">amonic.0fficial00@gmail.com</p>
+                    <div class="stamp-badge ms-lg-auto">HECHO CON PROPÓSITO • DESDE MONIQUIRÁ</div>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="text-center extra-small text-light-50">
+                © 2025 Ámonic. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>

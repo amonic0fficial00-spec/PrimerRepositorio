@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amonic - Elegancia con raíces</title>
+    <!-- Favicon de la página -->
+    <link rel="icon" type="image/png" href="Img/LOGO en barra.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap Iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="scroll-smooth">
+
+    <!-- Barra de Navegación -->
+    <header class="sticky-top bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light py-3">
+            <div class="container">
+                <!-- Logo en la Barra de Nav -->
+                <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+                    <img src="Img/LOGO en barra.png" alt="Amonic Logo" width="45" height="45" class="d-inline-block object-fit-contain">
+                    <div class="d-flex flex-column align-items-start">
+                        <span class="brand-title lh-1">Ámonic</span>
+                        <span class="brand-subtitle">Elegancia con raíces</span>
+                    </div>
+                </a>
+
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAmonic" aria-controls="navbarAmonic" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú de navegación y Carrito -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarAmonic">
+                    <ul class="navbar-nav gap-lg-4 text-center align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link custom-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-link" href="Nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-link" href="Tienda.html">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-link active" href="Contacto.html">Contacto</a>
+                        </li>
+                        <!-- Carrito de compras -->
+                        <li class="nav-item mt-2 mt-lg-0">
+                            <!-- Nota: Se recomienda renombrar el archivo físico a 'carrito-de-compras.html' para evitar espacios -->
+                            <a class="nav-link custom-link position-relative px-2" href="Carrito de Compras.html" aria-label="Carrito de compras">
+                                <i class="bi bi-bag fs-5 carrito-icon"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN CONTACTO / INFORMACIÓN -->
+        <section id="contacto" class="py-0 bg-light-section">
+            <div class="container-fluid px-0">
+                <div class="row g-0 align-items-stretch">
+
+                    <!-- Columna Izquierda: Formulario -->
+                    <div class="col-lg-6 p-4 p-md-5 d-flex flex-column justify-content-center bg-form-column">
+                        <div class="mx-auto form-wrapper">
+
+                            <div class="text-center mb-4">
+                                <span class="d-block text-uppercase fw-bold mb-2 contact-tag">Contacto</span>
+                                <h2 class="display-5 fw-normal mb-3 font-serif contact-title">Conecta con Ámonic</h2>
+                                <p class="text-muted fs-6 font-sans contact-desc">
+                                    Queremos escucharte. Si tienes preguntas sobre nuestras prendas, pedidos, tallas o quieres conocer más sobre nuestra marca, escríbenos.
+                                </p>
+
+                                <!-- Divisor con ícono -->
+                                <div class="d-flex align-items-center justify-content-center my-4">
+                                    <div class="border-bottom flex-grow-1 border-gray-custom"></div>
+                                    <i class="bi bi-leaf mx-3 icon-terracotta"></i>
+                                    <div class="border-bottom flex-grow-1 border-gray-custom"></div>
+                                </div>
+
+                                <h3 class="h6 fw-bold text-uppercase mb-4 subtitle-question">¿Tienes alguna pregunta?</h3>
+                            </div>
+
+                            <!-- Formulario de Contacto -->
+                            <form action="#" method="POST">
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label fw-bold text-uppercase mb-1 form-custom-label">Nombre</label>
+                                    <input type="text" class="form-control rounded-0 border-secondary-subtle py-2 bg-transparent form-custom-input" id="nombre" placeholder="Escribe tu nombre">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label fw-bold text-uppercase mb-1 form-custom-label">Correo Electrónico</label>
+                                    <input type="email" class="form-control rounded-0 border-secondary-subtle py-2 bg-transparent form-custom-input" id="email" placeholder="Escribe tu correo">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="asunto" class="form-label fw-bold text-uppercase mb-1 form-custom-label">Asunto</label>
+                                    <select class="form-select rounded-0 border-secondary-subtle py-2 bg-transparent form-custom-select" id="asunto">
+                                        <option selected disabled>Selecciona un asunto</option>
+                                        <option value="1">Consulta sobre prendas o tallas</option>
+                                        <option value="2">Estado de pedido</option>
+                                        <option value="3">Información general</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="mensaje" class="form-label fw-bold text-uppercase mb-1 form-custom-label">Mensaje</label>
+                                    <textarea class="form-control rounded-0 border-secondary-subtle py-2 bg-transparent form-custom-input" id="mensaje" rows="4" placeholder="Cuéntanos cómo podemos ayudarte"></textarea>
+                                </div>
+
+                                <button type="submit" class="btn text-white rounded-0 px-4 py-2 fw-semibold w-100 btn-send">
+                                    ENVIAR MENSAJE
+                                </button>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Información e Ilustración -->
+                    <div class="col-lg-6 p-4 p-md-5 d-flex flex-column justify-content-center position-relative overflow-hidden bg-info-column">
+                        <img src="Img/Banner de Contacto.png" alt="Flor de Guayaba Amarilla" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 z-0">
+                        
+                        <div class="mx-auto text-start position-relative z-1 info-wrapper">
+
+                            <div class="mb-4">
+                                <h2 class="display-4 fw-normal mb-0 font-serif info-brand-title">Ámonic</h2>
+                                <p class="text-uppercase fw-bold mb-3 info-brand-subtitle">Elegancia con raíces</p>
+                                <hr class="m-0 info-divider">
+                            </div>
+
+                            <!-- Lista de datos de contacto -->
+                            <ul class="list-unstyled mb-4 font-sans contact-info-list">
+                                <li class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-geo-alt-fill me-3 fs-5 icon-dark"></i>
+                                    <span>Moniquirá, Boyacá – Colombia</span>
+                                </li>
+                                <li class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-envelope me-3 fs-5 icon-dark"></i>
+                                    <span>Correo: amonic.0fficial00@gmail.com</span>
+                                </li>
+                                <li class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-whatsapp me-3 fs-5 icon-dark"></i>
+                                    <span>WhatsApp: +57 322 458 9012</span>
+                                </li>
+                                <li class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-instagram me-3 fs-5 icon-dark"></i>
+                                    <span>Instagram: amonic.0fficial00</span>
+                                </li>
+                            </ul>
+
+                            <div class="d-flex align-items-center my-4 info-divider-container">
+                                <div class="border-bottom flex-grow-1 border-gray-medium"></div>
+                                <i class="bi bi-leaf mx-3 icon-dark"></i>
+                                <div class="border-bottom flex-grow-1 border-gray-medium"></div>
+                            </div>
+
+                            <div class="mt-4">
+                                <h4 class="h6 fw-bold mb-2 font-serif cta-info-title">¿Quieres conocer nuestras colecciones?</h4>
+                                <p class="text-secondary small mb-3 font-sans cta-info-desc">
+                                    Descubre prendas inspiradas en la naturaleza, la cultura boyacense y la esencia de nuestro territorio.
+                                </p>
+                                <a href="Tienda.html" class="btn rounded-0 px-4 py-2 fw-semibold border btn-outline-amonic">
+                                    VER COLECCIÓN <i class="bi bi-leaf ms-1"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-dark text-white">
+        <p class="mb-0 fs-6 fw-bold font-sans">
+            © 2026 Ámonic Elegancia con raíces.
+        </p>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
