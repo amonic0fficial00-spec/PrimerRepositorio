@@ -55,6 +55,7 @@
                         <li class="nav-item mt-2 mt-lg-0">
                             <a class="nav-link custom-link position-relative px-2 active" href="Carrito de Compras.html" aria-label="Carrito de compras">
                                 <i class="bi bi-bag fs-5 carrito-icon"></i>
+                                <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" style="font-size: 0.65rem;">0</span>
                             </a>
                         </li>
                     </ul>
@@ -106,7 +107,10 @@
                         <span class="fs-5 fw-bold">Total</span>
                         <span id="cartTotal" class="fs-5 fw-bold text-dark">$ 0</span>
                     </div>
-                    <button class="btn btn-dark w-100 py-3 text-uppercase rounded-0 fw-semibold" onclick="alert('¡Compra simulada con éxito!')">Proceder al pago</button>
+                    <!-- CAMBIO 1: Botón actualizado para llamar a enviarPedidoWhatsApp -->
+                    <button id="checkoutBtn" class="btn btn-dark w-100 py-3 text-uppercase rounded-0 fw-semibold" onclick="enviarPedidoWhatsApp()">
+                        <i class="bi bi-whatsapp me-2"></i> Enviar pedido por WhatsApp
+                    </button>
                 </div>
             </div>
         </div>
@@ -120,7 +124,7 @@
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.bundle.min.js"></script>
 
-    <!-- Script para cargar el carrito -->
+    <!-- Script para cargar el carrito e integrar WhatsApp -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const cartContainer = document.getElementById("cart-items");
@@ -138,6 +142,13 @@
                     cartContainer.innerHTML = `<tr><td colspan="5" class="text-center py-5 text-muted">Tu carrito está vacío. <a href="Tienda.html" class="text-dark fw-bold">Ir a la tienda</a></td></tr>`;
                     if (cartSubtotalEl) cartSubtotalEl.textContent = "$ 0";
                     if (cartTotalEl) cartTotalEl.textContent = "$ 0";
+                    
+                    // Deshabilitar botón si el carrito está vacío
+                    const checkoutBtn = document.getElementById("checkoutBtn");
+                    if (checkoutBtn) {
+                        checkoutBtn.classList.add("disabled");
+                        checkoutBtn.style.pointerEvents = "none";
+                    }
                     return;
                 }
 
@@ -184,6 +195,46 @@
             cart.splice(index, 1);
             localStorage.setItem("amonicCart", JSON.stringify(cart));
             location.reload();
+        }
+
+        /* CAMBIO 2: Función nueva para armar el mensaje y abrir WhatsApp */
+        function enviarPedidoWhatsApp() {
+            let cart = JSON.parse(localStorage.getItem("amonicCart")) || [];
+            
+            if (cart.length === 0) {
+                alert("Tu carrito está vacío.");
+                return;
+            }
+
+            // REEMPLAZA ESTE NÚMERO con tu número de WhatsApp de Ámonic (código de país + número, sin el símbolo +)
+            // Ejemplo para Colombia: 573001234567
+            const telefono = "573112809498"; 
+
+            let mensaje = "¡Hola Ámonic! Quisiera realizar el siguiente pedido:\n\n";
+            let totalGral = 0;
+
+            cart.forEach((item) => {
+                let price = parseFloat(item.price) || 0;
+                let quantity = parseInt(item.quantity) || 0;
+                let subtotal = price * quantity;
+                totalGral += subtotal;
+
+                mensaje += `• ${item.name}\n`;
+                mensaje += `  Talla: ${item.size || 'Única'} | Color: ${item.color || 'Estándar'}\n`;
+                mensaje += `  Cantidad: ${quantity} x $ ${price.toLocaleString()} = $ ${subtotal.toLocaleString()} \n\n`;
+            });
+
+            mensaje += `──────────────────\n`;
+            mensaje += `Total a Pagar: $ ${totalGral.toLocaleString()}\n`;
+            mensaje += `──────────────────\n\n`;
+            mensaje += `Quedo atento(a) para coordinar el pago y el envío. ¡Muchas gracias!`;
+
+            // Codificar el mensaje para URL
+            const mensajeCodificado = encodeURIComponent(mensaje);
+
+            // Abrir la API de WhatsApp
+            const urlWhatsApp = `https://wa.me/${telefono}?text=${mensajeCodificado}`;
+            window.open(urlWhatsApp, '_blank');
         }
     </script>
 </body>

@@ -53,7 +53,6 @@
                         </li>
                         <!-- Carrito de compras -->
                         <li class="nav-item mt-2 mt-lg-0">
-                            <!-- Nota: Se recomienda renombrar el archivo físico a 'carrito-de-compras.html' para evitar espacios -->
                             <a class="nav-link custom-link position-relative px-2" href="Carrito de Compras.html" aria-label="Carrito de compras">
                                 <i class="bi bi-bag fs-5 carrito-icon"></i>
                             </a>
@@ -92,30 +91,30 @@
                             </div>
 
                             <!-- Formulario de Contacto -->
-                            <form action="#" method="POST">
+                            <form id="formContacto">
                                 <div class="mb-3">
                                     <label for="nombre" class="form-label fw-bold text-uppercase mb-1 form-custom-label">Nombre</label>
-                                    <input type="text" class="form-control rounded-0 border-secondary-subtle py-2 bg-transparent form-custom-input" id="nombre" placeholder="Escribe tu nombre">
+                                    <input type="text" class="form-control rounded-0 border-secondary-subtle py-2 bg-transparent form-custom-input" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="email" class="form-label fw-bold text-uppercase mb-1 form-custom-label">Correo Electrónico</label>
-                                    <input type="email" class="form-control rounded-0 border-secondary-subtle py-2 bg-transparent form-custom-input" id="email" placeholder="Escribe tu correo">
+                                    <input type="email" class="form-control rounded-0 border-secondary-subtle py-2 bg-transparent form-custom-input" id="email" name="email" placeholder="Escribe tu correo" required>
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="asunto" class="form-label fw-bold text-uppercase mb-1 form-custom-label">Asunto</label>
-                                    <select class="form-select rounded-0 border-secondary-subtle py-2 bg-transparent form-custom-select" id="asunto">
-                                        <option selected disabled>Selecciona un asunto</option>
-                                        <option value="1">Consulta sobre prendas o tallas</option>
-                                        <option value="2">Estado de pedido</option>
-                                        <option value="3">Información general</option>
+                                    <select class="form-select rounded-0 border-secondary-subtle py-2 bg-transparent form-custom-select" id="asunto" name="asunto" required>
+                                        <option selected disabled value="">Selecciona un asunto</option>
+                                        <option value="Consulta sobre prendas o tallas">Consulta sobre prendas o tallas</option>
+                                        <option value="Estado de pedido">Estado de pedido</option>
+                                        <option value="Información general">Información general</option>
                                     </select>
                                 </div>
 
                                 <div class="mb-4">
                                     <label for="mensaje" class="form-label fw-bold text-uppercase mb-1 form-custom-label">Mensaje</label>
-                                    <textarea class="form-control rounded-0 border-secondary-subtle py-2 bg-transparent form-custom-input" id="mensaje" rows="4" placeholder="Cuéntanos cómo podemos ayudarte"></textarea>
+                                    <textarea class="form-control rounded-0 border-secondary-subtle py-2 bg-transparent form-custom-input" id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos cómo podemos ayudarte" required></textarea>
                                 </div>
 
                                 <button type="submit" class="btn text-white rounded-0 px-4 py-2 fw-semibold w-100 btn-send">
@@ -189,7 +188,48 @@
         </p>
     </footer>
 
+    <!-- JS de Bootstrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+
+    <!-- JS para enviar mensaje vía Gmail -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const formContacto = document.getElementById('formContacto');
+
+            if (formContacto) {
+                formContacto.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Previene la recarga de página
+
+                    // Captura de datos
+                    const nombre = document.getElementById('nombre').value;
+                    const emailCliente = document.getElementById('email').value;
+                    const asuntoSelect = document.getElementById('asunto').value;
+                    const mensaje = document.getElementById('mensaje').value;
+
+                    // Correo de la empresa
+                    const correoEmpresa = "amonic.0fficial00@gmail.com";
+
+                    // Formato de asunto y mensaje
+                    const asuntoEmail = `${asuntoSelect} - Mensaje de ${nombre}`;
+                    const cuerpoEmail = `Hola equipo de Ámonic,\n\n` +
+                                        
+                                        `• Nombre: ${nombre}\n` +
+                                        `• Correo del cliente: ${emailCliente}\n` +
+                                        `• Asunto: ${asuntoSelect}\n\n` +
+                                        `• Mensaje:\n${mensaje}\n\n` +
+                                        `---`;
+
+                    // Enlace hacia Gmail Web
+                    const urlGmail = `https://mail.google.com/mail/?view=cm&fs=1` +
+                                     `&to=${encodeURIComponent(correoEmpresa)}` +
+                                     `&su=${encodeURIComponent(asuntoEmail)}` +
+                                     `&body=${encodeURIComponent(cuerpoEmail)}`;
+
+                    // Abrir pestaña nueva con Gmail
+                    window.open(urlGmail, '_blank');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
