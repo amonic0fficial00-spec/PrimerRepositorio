@@ -76,7 +76,52 @@
             </div>
         </div>
     </section>
+  <!-- 2. GALERÍA DE FOTOS (CARRUSEL) -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="font-serif">Galería de Colección</h2>
+            </div>
+            <div id="galeriaCarousel" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#galeriaCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#galeriaCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#galeriaCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="Img/Banner 1.png" class="d-block w-100 object-fit-cover" style="max-height: 500px;" alt="Elegancia con raíces Ámonic">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Img/Banner 2.png" class="d-block w-100 object-fit-cover" style="max-height: 500px;" alt="Detalle bordado">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Img/Banner Ámonic.png" class="d-block w-100 object-fit-cover" style="max-height: 500px;" alt="Bordado botánico Ámonic">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#galeriaCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#galeriaCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
 
+    <!-- 3. PRIMER VIDEO (Ubicado en la carpeta Img) -->
+    <section class="py-5 bg-white">
+        <div class="container text-center">
+            <div class="ratio ratio-16x9 shadow rounded overflow-hidden mx-auto" style="max-width: 900px;">
+                <video controls poster="Img/Moniquirá Parque.jfif">
+                    <source src="Img/Video 1.mp4" type="video/mp4">
+                    Tu navegador no soporta reproducción de video.
+                </video>
+            </div>
+        </div>
+    </section>
     <!-- BLOQUE 1: Nuestra Identidad -->
     <section class="py-5 bg-nosotros">
         <div class="container py-4">
@@ -143,7 +188,17 @@
 
         </div>
     </section>
-
+<!-- 5. SEGUNDO VIDEO (Antes del Footer - Ubicado en la carpeta Img) -->
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <div class="ratio ratio-16x9 shadow rounded overflow-hidden mx-auto" style="max-width: 900px;">
+                <video controls poster="Img/Moniquirá Parque.jfif">
+                    <source src="Img/Video 2.mp4" type="video/mp4">
+                    Tu navegador no soporta reproducción de video.
+                </video>
+            </div>
+        </div>
+    </section>
     <!-- Footer -->
     <footer class="text-center py-4 bg-dark text-white">
         <p class="mb-0 fs-6 fw-bold font-sans">
